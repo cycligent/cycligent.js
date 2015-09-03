@@ -1,0 +1,24 @@
+{
+  "name": "cycligent.js",
+  "version": "1.0.0",
+  "description": "Asynchronous script loading, including lazy loading for Angular.js, classic object model, and more.",
+  "main": "cycligent.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cycligent/cycligent.js.git"
+  },
+  "keywords": [
+    "async",
+    "oop",
+    "loading"
+  ],
+  "author": "Improvement Interactive",
+  "license": "Apache-2.0",
+  "bugs": {
+    "url": "https://github.com/cycligent/cycligent.js/issues"
+  },
+  "homepage": "https://github.com/cycligent/cycligent.js#readme"
+}
