@@ -1,0 +1,4331 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>JSDoc: Namespace: cycligent</title>
+
+    <script src="scripts/prettify/prettify.js"> </script>
+    <script src="scripts/prettify/lang-css.js"> </script>
+    <!--[if lt IE 9]>
+      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <link type="text/css" rel="stylesheet" href="styles/prettify-tomorrow.css">
+    <link type="text/css" rel="stylesheet" href="styles/jsdoc-default.css">
+    <link href='http://fonts.googleapis.com/css?family=Droid+Sans' rel='stylesheet' type='text/css'>
+</head>
+
+<body>
+
+<div id="main">
+
+    <h1 class="page-title">Namespace: cycligent</h1>
+
+    
+
+
+
+<section>
+
+<header>
+    <h2>
+    cycligent
+    </h2>
+    
+</header>
+
+<article>
+    <div class="container-overview">
+    
+
+    
+        
+            <div class="description">The Cycligent namespace</div>
+        
+
+        
+<dl class="details">
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="cycligent.js.html">cycligent.js</a>, <a href="cycligent.js.html#line67">line 67</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+        
+    
+    </div>
+
+    
+
+    
+
+    
+
+    
+        <h3 class="subsection-title">Classes</h3>
+
+        <dl>
+            <dt><a href="cycligent.Script.html">Script</a></dt>
+            <dd></dd>
+        </dl>
+    
+
+     
+
+    
+
+    
+        <h3 class="subsection-title">Members</h3>
+
+        <dl>
+            
+<dt>
+    <h4 class="name" id=".browser"><span class="type-signature">(static) </span>browser<span class="type-signature"> :object</span></h4>
+
+    
+</dt>
+<dd>
+    
+    <div class="description">
+        Details the browser in which the code is running.
+    </div>
+    
+
+    
+        <h5>Type:</h5>
+        <ul>
+            <li>
+                
+<span class="param-type">object</span>
+
+
+            </li>
+        </ul>
+    
+
+    
+<dl class="details">
+    
+
+        <h5 class="subsection-title">Properties:</h5>
+
+        <dl>
+
+<table class="props">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>ie</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">boolean</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">True when the browser is Internet Explorer</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>chrome</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">boolean</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">True when the browser is Chrome</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>firefox</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">boolean</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">True when the browser is Firefox</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>safari</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">boolean</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">True when the browser is Safari</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>version</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">float</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">For IE holds the version number of the browser.</td>
+        </tr>
+
+    
+    </tbody>
+</table></dl>
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="cycligent.js.html">cycligent.js</a>, <a href="cycligent.js.html#line195">line 195</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+    
+
+    
+        <h5>Example</h5>
+        
+    <pre class="prettyprint"><code>if( cycligent.browser.ie ){
+   alert( "I am running in Internet Explorer!" );
+}</code></pre>
+
+    
+</dd>
+
+        
+            
+<dt>
+    <h4 class="name" id=".classArgs"><span class="type-signature">(static) </span>classArgs<span class="type-signature"></span></h4>
+
+    
+</dt>
+<dd>
+    
+    <div class="description">
+        Arguments for cycligent.class.
+    </div>
+    
+
+    
+
+    
+<dl class="details">
+    
+
+        <h5 class="subsection-title">Properties:</h5>
+
+        <dl>
+
+<table class="props">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+        <th>Attributes</th>
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>name</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string</span>
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+
+                
+                </td>
+            
+
+            
+
+            <td class="description last">The fully qualified dotted name fo the class.</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>extends</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string</span>
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+                    &lt;optional><br>
+                
+
+                
+                </td>
+            
+
+            
+
+            <td class="description last">The fully qualified dotted name of the
+class to extend.</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>implements</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string</span>
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+                    &lt;optional><br>
+                
+
+                
+                </td>
+            
+
+            
+
+            <td class="description last">The fully qualified dotted names of the
+interfaces required by the class. If the class implements multiple
+interfaces, separate them by commas.</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>definition</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">object</span>
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+
+                
+                </td>
+            
+
+            
+
+            <td class="description last">The object, usually from a code literal,
+that defines the class.</td>
+        </tr>
+
+    
+    </tbody>
+</table></dl>
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="cycligent.js.html">cycligent.js</a>, <a href="cycligent.js.html#line2270">line 2270</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+    <dt class="tag-see">See:</dt>
+    <dd class="tag-see">
+        <ul>
+            <li><a href="cycligent.html#.class">cycligent.class</a></li>
+        </ul>
+    </dd>
+    
+
+    
+</dl>
+
+
+    
+
+    
+</dd>
+
+        
+            
+<dt>
+    <h4 class="name" id=".config"><span class="type-signature">(static) </span>config<span class="type-signature"> :object</span></h4>
+
+    
+</dt>
+<dd>
+    
+    <div class="description">
+        Configures the loading and debugging of Cycligent.<br/><br/>You define this yourself in a file named config.js since it's forapplication-specific configuration, see <a href="cycligent.html#._loader">cycligent._loader</a> for anexplanation of where the config.js file is loaded from.
+    </div>
+    
+
+    
+        <h5>Type:</h5>
+        <ul>
+            <li>
+                
+<span class="param-type">object</span>
+
+
+            </li>
+        </ul>
+    
+
+    
+<dl class="details">
+    
+
+        <h5 class="subsection-title">Properties:</h5>
+
+        <dl>
+
+<table class="props">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>appName</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">The name of the application. Often displayedby the application.</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>appDescription</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">A description of the application. Oftendisplayed by the application in an about box.  Often contains copyrightand/or licensing information.</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>appVersion</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">The version of the deployed application.Usually contains the value "M.m.B" (major, minor, build) on a developer'smachine. Changed by the build and deploy process so that the deployedapplication can accurately display the currently running version.</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>production</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">boolean</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">When true this indicates that this is beingserved by a Cycligent server employing advanced caching mechanisms (theversioning of all static resources), otherwise we expect all resources to beserved as is. Is is usually set by the build process.</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>minimizeSource</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">boolean</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">Typically set by the build process.When true .min files are served.</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>startupScript</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">The name and location of the startupscript expressed as either a dotted name or URL. This is the main scriptthat will import all other scripts and start the application. Once theCycligent bootstrap process has completed, including the loading of allimported scripts, Cycligent calls the main() function. Typically the valueof this property is "main" meaning that the file main.js is loaded fromthe same directory as the HTML file.</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>loader</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">object</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">
+                <h6>Properties</h6>
+
+<table class="props">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>libs</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Array.&lt;string></span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">A list of URLs that represent the base libraryscripts that must be loaded synchronously.</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>waitFor</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">object</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">Signals to wait for before startingthe application (calling main()).
+                <h6>Properties</h6>
+
+<table class="props">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>dom</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">boolean</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">Wait for the DOM to be ready. <b>If thecycligent script tag is placed at the end of the body element, waiting forDOM ready is unnecessary.</b></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>page</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">boolean</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">Wait for the page to be ready(window.onload).</td>
+        </tr>
+
+    
+    </tbody>
+</table>
+            </td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>timeout</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">int</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">The maximum time to wait for the application tobecome ready.</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>roots</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">object</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">Map of root namespaces and their associatedURLs. Used to shorten dotted names. See example.</td>
+        </tr>
+
+    
+    </tbody>
+</table>
+            </td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>debug</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">object</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">Configures Cycligent Debugging. Properties are in adisabled state by default so that the framework will run as efficiently aspossible by performing the fewest checks. You'll want to enable most of theseduring development, and disable most or all of them in production.
+                <h6>Properties</h6>
+
+<table class="props">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>on</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">boolean</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">When true Cycligent performs debugging functions,when false all debugging functions are disabled.</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>startup</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">boolean</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">When true Cycligent sends informationalmessages to the console during the startup process.</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>scripts</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">boolean</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">When true Cycligent sends informationalmessages to the console on the loading of each script (load started, loadcompleted, redundant load avoided, etc).</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>private</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">object</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">Control for private function debugging.
+                <h6>Properties</h6>
+
+<table class="props">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>check</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">boolean</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">When true private functionscontaining cycligent.private are validated.</td>
+        </tr>
+
+    
+    </tbody>
+</table>
+            </td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>args</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">object</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">Control for function argument checking.
+                <h6>Properties</h6>
+
+<table class="props">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>check</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">boolean</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">When true arguments to functionscontaining cycligent.args are validated.</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>arrays</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">object</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">Control for how array arguments arevalidated.
+                <h6>Properties</h6>
+
+<table class="props">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>check</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">boolean</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">When true array arguments arevalidated.</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>allElements</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">boolean</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">When true all arrayelements are validated.  This can be a very time consuming operation and isnot recommended.  When false only the first element of the array isvalidated.</td>
+        </tr>
+
+    
+    </tbody>
+</table>
+            </td>
+        </tr>
+
+    
+    </tbody>
+</table>
+            </td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>interface</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">object</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">Control for interface validation.
+                <h6>Properties</h6>
+
+<table class="props">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>check</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">boolean</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">When true interfaces arevalidated.</td>
+        </tr>
+
+    
+    </tbody>
+</table>
+            </td>
+        </tr>
+
+    
+    </tbody>
+</table>
+            </td>
+        </tr>
+
+    
+    </tbody>
+</table></dl>
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="config.js.html">config.js</a>, <a href="config.js.html#line132">line 132</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+    
+
+    
+        <h5>Example</h5>
+        
+    <pre class="prettyprint"><code>cycligent.config = {    appName: "My Awesome Application",    appDescription: "The most awesome application ever",    appVersion: "M.m.B",    production: false,    minimizeSource: false,    startupScript: "^main",    loader: {        libs: [            '/app/lib/smart/js/libs/jquery-2.0.2.min.js',            '/app/bower_components/angular/angular.min.js',            '/app/bower_components/angular-route/angular-route.min.js'        ],        waitFor:{            dom: true,            page: false        },        timeout: (location.hostname == "localhost" || location.hostname == "" ? 7000 : 70000),        roots: {            cycligent: { root: "/app/lib/cycligent" }        }    },    debug: {        on: true,        startup: false,        scripts: false,        private:{            check: true        },        args: {            check: true,            arrays:{                check: true,                allElements: false            }        },        interfaces: {            check: true        }    }};</code></pre>
+
+    
+</dd>
+
+        
+            
+<dt>
+    <h4 class="name" id=".interfaceArgs"><span class="type-signature">(static) </span>interfaceArgs<span class="type-signature"></span></h4>
+
+    
+</dt>
+<dd>
+    
+    <div class="description">
+        Arguments for cycligent.interface.
+    </div>
+    
+
+    
+
+    
+<dl class="details">
+    
+
+        <h5 class="subsection-title">Properties:</h5>
+
+        <dl>
+
+<table class="props">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+        <th>Attributes</th>
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>name</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string</span>
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+
+                
+                </td>
+            
+
+            
+
+            <td class="description last">The fully qualified dotted name fo the class.</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>extends</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string</span>
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+                    &lt;optional><br>
+                
+
+                
+                </td>
+            
+
+            
+
+            <td class="description last">The fully qualified dotted name of the
+class to extend.</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>definition</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">object</span>
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+
+                
+                </td>
+            
+
+            
+
+            <td class="description last">The object, usually from a code literal,
+that defines the class.</td>
+        </tr>
+
+    
+    </tbody>
+</table></dl>
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="cycligent.js.html">cycligent.js</a>, <a href="cycligent.js.html#line2654">line 2654</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+    <dt class="tag-see">See:</dt>
+    <dd class="tag-see">
+        <ul>
+            <li><a href="cycligent.html#.interface">cycligent.interface</a></li>
+        </ul>
+    </dd>
+    
+
+    
+</dl>
+
+
+    
+
+    
+</dd>
+
+        
+            
+<dt>
+    <h4 class="name" id=".root"><span class="type-signature">(static) </span>root<span class="type-signature"> :object</span></h4>
+
+    
+</dt>
+<dd>
+    
+    <div class="description">
+        Holds information regarding the web application root structures
+of the application and the environment it runs in.
+
+This is automatically created by the Cycligent framework,
+but you can define it yourself before the framework loads
+if it's necessary to direct the framework to use non-standard
+locations for resources (for example, in some testing environments.)
+    </div>
+    
+
+    
+        <h5>Type:</h5>
+        <ul>
+            <li>
+                
+<span class="param-type">object</span>
+
+
+            </li>
+        </ul>
+    
+
+    
+<dl class="details">
+    
+
+        <h5 class="subsection-title">Properties:</h5>
+
+        <dl>
+
+<table class="props">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>app</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">The application root as an absolute URL</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>name</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">Just the application root name</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>client</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">Root directory for client-side resources
+as an absolulte URL. Typically used with server-side JavaScript
+environments where both server and client resources look the same but
+are placed in different directories. For other environments it is the
+same as app root.</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>deploy</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">Deployment directory absolute URL, used
+for accessing other deployed applications, often libraries.</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>context</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">Testing context provides tests with a
+context for realizing relative paths, essentially the same as what
+window.location would have been in the actual running code.</td>
+        </tr>
+
+    
+    </tbody>
+</table></dl>
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="cycligent.js.html">cycligent.js</a>, <a href="cycligent.js.html#line107">line 107</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+    
+
+    
+        <h5>Example</h5>
+        
+    <pre class="prettyprint"><code>app == "http://some.cloud.com/myApp"
+name == "myApp"
+client == "http://some.cloud.com/myApp/client"
+deploy == "http://some.cloud.com"
+context == "http://some.cloud.com/myApp/client/myPage"</code></pre>
+
+    
+</dd>
+
+        </dl>
+    
+
+    
+        <h3 class="subsection-title">Methods</h3>
+
+        <dl>
+            
+<dt>
+    <h4 class="name" id="._loader"><span class="type-signature">(static) </span>_loader<span class="signature">()</span><span class="type-signature"></span></h4>
+
+    
+    <p class="summary">Loads Cycligent and its dependencies.</p>
+    
+</dt>
+<dd>
+
+    
+    <div class="description">
+        Implemented as a function that executes immediately. _loader should not be
+called but is documented here to provide information about Cycligent's
+bootstrapping process and it associated configurations.<br>
+<br>
+At startup the first file loaded by cycligent is config.js. Config.js
+contains the global configuration for cycligent.<br>
+<br>
+By default config.js is loaded from the root directory for servers
+that do not have a concept of application root or from the application
+root for servers that do have the concept of an application root.
+<br>
+<br>
+If the default method of guessing where config.js is doesn't work in
+your environment, the config.js location can be specified in the
+following ways:
+
+<ul>
+    <li>config-location (or x-config-location or data-config-location) attribute
+        on the script tag. (recommended)
+    <li>config-depth (or x-config-depth or data-config-depth) attribute on the
+        script tag. This attribute is the depth within the path hierarchy from
+        the current HTML file (window.location), where a depth of zero is the
+        root directory of the server.
+    <li>Specifying a URL of the config location in
+    window.cycligentConfigLocationOverride (often useful in testing.)
+</ul>
+By default the application root is determined in the same manner as for the
+config.js file. If the default method of figuring out the app root doesn't
+work in your environment, the application root can be specified via the
+config-app-root (or x-config-app-roox or data-config-app-root) attribute.
+No trailing slash should be used when specifying the path.
+    </div>
+    
+
+    
+
+    
+
+    
+
+    
+<dl class="details">
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="cycligent.js.html">cycligent.js</a>, <a href="cycligent.js.html#line3805">line 3805</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+        <h5>Example</h5>
+        
+    <pre class="prettyprint"><code>Example 1 (config-depth="0")
+Requested URL: http://localhost:3680/app/myApp/myPage/index.html
+&lt;script id="cycligent-script" src="/app/lib/cycligent/cycligent.js" data-config-depth="0">&lt;/script>
+config file will be read from /config.js.
+
+Example 2 (config-depth="2")
+Requested URL: http://localhost:3680/app/myApp/myPage/index.html
+&lt;script id="cycligent-script" src="/app/lib/cycligent/cycligent.js" data-config-depth="2">&lt;/script>
+config file will be read from /app/myApp/config.js
+
+Example 3 (config-location="/app/config.js")
+Requested URL: http://localhost:3680/app/myApp/myPage/index.html
+&lt;script id="cycligent-script" src="/app/lib/cycligent/cycligent.js" data-config-location="/app/config.js">&lt;/script>
+config file will be read from /app/config.js
+
+Example 4 (window.cycligentConfigLocationOverride="/app/config.js")
+Requested URL: http://localhost:3680/app/myApp/myPage/index.html
+&lt;script type="text/javascript">window.cycligentConfigLocationOverride = "/app/config.js";&lt;/script>
+&lt;script id="cycligent-script" src="/app/lib/cycligent/cycligent.js">&lt;/script>
+config file will be read from /app/config.js</code></pre>
+
+    
+</dd>
+
+        
+            
+<dt>
+    <h4 class="name" id=".args"><span class="type-signature">(static) </span>args<span class="signature">(argsIn, spec, ignoreExtraArguments<span class="signature-attributes">opt</span>)</span><span class="type-signature"></span></h4>
+
+    
+</dt>
+<dd>
+
+    
+    <div class="description">
+        Enhances and optionally validates the arguments passed to a function.<br>
+<br>
+cycligent.args always takes the form cycligent.args(arguments, [ArgumentSpec]);<br>
+<br>
+Argument specifications take the form of an object literal which contains
+one or more properties.  Each of these properties represents an argument.
+Each of the argument properties contains another object literal that
+defines the attributes of the argument.  The available argument attributes
+are type, required and defaultValue. See examples below for how to structure
+argument specifications.<br>
+<br>
+The Cycligent Framework provides the following enhancement for function arguments:
+<br>
+<br>
+<li>Mapped or ordered arguments for the same function</li>
+<li>Default values for optional arguments</li>
+<li>Validation of supplied arguments (required, quantity and type)</li>
+<li>Handling of advanced types (Arrays and HTML elements)</li>
+<li>Reuse of argument specifications, especially useful with interfaces</li>
+<br>
+cycligent.args supports either mapped or ordered arguments.  When a single
+argument is passed to a function, and that argument is an object,
+and that object contains a property named the same as an argument,
+it is assumed to be an argument map. In all other cases the system
+treats the arguments as ordered. To pass a single object to a function
+that has a property with the same name as an argument
+it must be passed in  as a map. (function( object ) will not work).
+The construct of  function( {argumentName: object} ) must be used
+instead. When a map is not used the arguments must be passed in the
+order of their declaration.<br>
+<br>
+cycligent.args will also provide default values for optional arguments that
+are not supplied, if a default value for the optional argument has been
+provided.<br>
+<br>
+Supplied arguments can be validated for correctness. Validations are
+performed when cycligent.config.debug.on and
+cycligent.config.debug.args.check are true. When validation is active
+arguments are validated for the correct type, that all required
+arguments were supplied, and that the correct number of arguments were
+supplied.<br>
+<br>
+All required arguments must appear before any optional arguments. This
+conventions allows cycligent.args to successfully parse arguments which are
+passed to a function but are not in a map.<br>
+<br>
+cycligent.args supports advanced types. Array arguments can be specified
+by wrapping the type in square brackets, as in "[String]" (which indicates
+that the function takes an array of strings).  When validation is on,
+cycligent.config.debug.args.arrays.check is true, then arrays are checked
+for the correct type.  When cycligent.config.debug.args.arrays.allElements
+is true, elements of the array validated to contain the correct type.
+This can be very time consuming and is not recommended.  Therefore,
+cycligent.config.debug.args.arrays.allElements defaults to false, in which
+case only the first element of the array is validated.<br>
+<br>
+In addition to arrays, cycligent.args supports special types.  Specials types are
+passed as a string.  Currently cycligent.args supports Document, HTML elements and
+XML nodes as special types. Document is a DOM/XML document. If an argument
+can take any HTML element then
+the argument specification would be "HtmlElement".  Likewise for any XML
+node the argument would by "XmlNode". If an argument requires a specific
+type of HTML element or XML node, such as a div, then that is specified
+by postfixing the "HtmlElement" or "XmlNode" with a colon and the elements
+tag name (in all lowercase) as in "HtmlElement:div" or "XmlNode:item".<br>
+<br>
+Argument specifications can be stored in a variable and reused. This is
+especially helpful when interfaces are declared. When an interface is
+declared the signatures for its methods are stored in the interfaces
+prototype. This allows the developer to use these prototype properties
+in the creation of methods on an object that implements the interface.<br>
+<br>
+The convention when working with the cycligent framework is to use a
+variable named 'a' to hold the return value from cycligent.args.
+variable named 'a' to hold the return value from cycligent.args.
+    </div>
+    
+
+    
+
+    
+
+    
+        <h5>Parameters:</h5>
+        
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+        <th>Attributes</th>
+        
+
+        
+        <th>Default</th>
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>argsIn</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Array.&lt;arguments></span>
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+
+                
+
+                
+                </td>
+            
+
+            
+                <td class="default">
+                
+                </td>
+            
+
+            <td class="description last">The arguments object that is
+passed/present in a function.</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>spec</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Object</span>
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+
+                
+
+                
+                </td>
+            
+
+            
+                <td class="default">
+                
+                </td>
+            
+
+            <td class="description last">The argument specification.</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>ignoreExtraArguments</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Boolean</span>
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+                    &lt;optional><br>
+                
+
+                
+
+                
+                </td>
+            
+
+            
+                <td class="default">
+                
+                    false
+                
+                </td>
+            
+
+            <td class="description last">When true extra arguments are
+ignored. Typically used by base classes that are inherited to allow
+the super class to pass the argument list passed to it to the base
+class.</td>
+        </tr>
+
+    
+    </tbody>
+</table>
+    
+
+    
+<dl class="details">
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="cycligent.js.html">cycligent.js</a>, <a href="cycligent.js.html#line1770">line 1770</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+        <h5>Example</h5>
+        
+    <pre class="prettyprint"><code>// Using examples from the Cycligent framework itself:
+
+cycligent.class = function(){
+    var a = cycligent.args(arguments, {
+        name:{type: String},                         // The fully qualified name of the class being created
+        definition:{type: Object},                   // The object literal that defines the class
+        extends:{type: Object, required: false},     // The class from which this class inherits its methods and properties
+        implements:{type: [Object], required: false} // The newly created class implements the interface class or classes specified
+    });
+    ...
+
+********** OR VIA REUSABLE ARGS **********
+
+cycligent.classArgs = {
+    name:{type: String},                             // The fully qualified name of the class being created
+    definition:{type: Object},                       // The object literal that defines the class
+    extends:{type: Object, required: false},         // The class from which this class inherits its methods and properties
+    implements:{type: [Object], required: false}     // The newly created class implements the interface class or classes specified
+};
+
+cycligent.class = function(){
+    var a = cycligent.args(arguments, cycligent.classArgs);
+    ...
+
+********** OR VIA INTERFACE **********
+
+cycligent.tracerMessageArgs = {
+    message:{type: String},                          // The trace message.
+    type:{type: Number, required: false, defaultValue: cycligent.traceTypes.information }, // The trace type (a value from cycligent.traceTypes).
+    category:{type: String, required: false, defaultValue: ""}, // A string representing the category of the trace. Used for filtering (see cycligent.config.trace).
+    ex: {type: Object, required: false}
+};
+
+cycligent.interface({
+    name: "cycligent.TracerInt",
+    definition:{
+        getElement: {},                              // Gets the HTML element that holds the trace information.
+        setElement: {element: {type: "HtmlElement:DIV"}}, // Sets the HTML element that holds the trace information.
+        trace: cycligent.tracerMessageArgs                  // Issue a trace.
+    }
+});
+
+...
+trace: function(){
+    cycligent.args(arguments,cycligent.TracerInt.prototype.trace);
+...</code></pre>
+
+    
+</dd>
+
+        
+            
+<dt>
+    <h4 class="name" id=".class"><span class="type-signature">(static) </span>class<span class="signature">(map)</span><span class="type-signature"></span></h4>
+
+    
+    <p class="summary">Declares a class that supports classical inheritance and interfaces.</p>
+    
+</dt>
+<dd>
+
+    
+    <div class="description">
+        cycligent.class allows a class to be created that extends (inherits from) another
+class. It also provides for the implementation of interfaces. To make class
+definitions easy to follow, it is recommended that calls to cycligent.class use
+mapped arguments in the following order: name, extends, implements, definition.
+See the example below. cycligent.class also validates that the first character of
+the class name is an uppercase letter, which is the common convention in
+JavaScript.<br>
+<br>
+cycligent.class definitions should be placed outside of functions. This allows
+them to be processed at startup. The processing of class definitions that
+are dependant on other class definitions that have not yet been processed
+are deferred until they can be processed.  This allows race conditions
+during the asynchronous loading of scripts at startup to be avoided, and makes the
+order in which scripts are loaded unimportant.<br>
+<br>
+If enabled in the configuration settings (see cycligent.config.debug.interfaces)
+the interfaces implemented by the class are validated. This is done by checking
+the class's source to see if it is calling <a href="cycligent.html#.args">cycligent.args</a> on the argument
+definition defined by the interface.
+<br>
+Note that if you define a class, you can create it as a singleton using
+<a href="cycligent.html#.singleton">cycligent.singleton</a>. Singleton classes can have an initSingleton that
+will be called when the class is instantiated as a singleton.
+    </div>
+    
+
+    
+
+    
+
+    
+        <h5>Parameters:</h5>
+        
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>map</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">object</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">The object that specifies the class, typically
+from an object literal in code (see example, and <a href="cycligent.html#.classArgs">cycligent.classArgs</a>).</td>
+        </tr>
+
+    
+    </tbody>
+</table>
+    
+
+    
+<dl class="details">
+    
+
+        <h5 class="subsection-title">Properties:</h5>
+
+        <dl>
+
+<table class="props">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>cycligentClass</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">The name of the class as a property
+of the prototype.</td>
+        </tr>
+
+    
+    </tbody>
+</table></dl>
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="cycligent.js.html">cycligent.js</a>, <a href="cycligent.js.html#line2278">line 2278</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+    <dt class="tag-see">See:</dt>
+    <dd class="tag-see">
+        <ul>
+            <li><a href="cycligent.html#.singleton">cycligent.singleton</a></li>
+        </ul>
+    </dd>
+    
+
+    
+</dl>
+
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+        <h5>Example</h5>
+        
+    <pre class="prettyprint"><code>cycligent.class({
+    name: "cycligent.Tracer",
+    extends: "cycligent.ExtendThisClassExample"
+    implements: "cycligent.TracerInt, cycligent.anotherInterface",
+    definition: {
+        ...
+    }
+});</code></pre>
+
+    
+</dd>
+
+        
+            
+<dt>
+    <h4 class="name" id=".define"><span class="type-signature">(static) </span>define<span class="signature">(name, definition<span class="signature-attributes">opt</span>, priority<span class="signature-attributes">opt</span>)</span><span class="type-signature"></span></h4>
+
+    
+    <p class="summary">Allows the creation of identifiers in a way that takes into account dependencies
+and optionally allows for a function to be run when the identifier is created or
+during a prioritized startup.</p>
+    
+</dt>
+<dd>
+
+    
+    <div class="description">
+        cycligent.define allows files to be loaded in any order
+and thus enables asynchronous loading of JavaScript files.  The actual definition
+(creation) of the identifier does not happen until all of it dependencies are
+defined.<br>
+<br>
+If a definition function is defined and no priority is defined the definition
+function is called immediately upon the creation of the identifier (the
+identifier is defined when the function is called). If a definition function and
+priority are specified then the call of the definition function is delayed until
+all startup process have completed and then the definition function is called, in
+the order indicated by priority, just before main() is called.<br>
+<br>
+All priority 1 functions are called first, then all priority 2 functions, and so on
+and so forth. Please note that the order of calls within a priority are random.  So,
+for instance, if you set three functions as priority 1 you are assured that these
+function will be called before any other definition functions, but you don't know
+which of these three functions will be called first, second or third.<br>
+<br>
+If after all scripts have been loaded the dependencies for a given define have not
+been created, then Cycligent creates those dependencies as blank objects.  So, for
+instance, if there was a define of 'demo.something.here' and after all
+scripts had loaded only 'demo' was defined then Cycligent would define 'something'
+as a blank object and then define 'here' as well.<br>
+    </div>
+    
+
+    
+
+    
+
+    
+        <h5>Parameters:</h5>
+        
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+        <th>Attributes</th>
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>name</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string</span>
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+
+                
+
+                
+                </td>
+            
+
+            
+
+            <td class="description last">The fully qualified name/namespace to define</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>definition</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">*</span>
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+                    &lt;optional><br>
+                
+
+                
+
+                
+                </td>
+            
+
+            
+
+            <td class="description last">Value/object/definition to be assigned to the name</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>priority</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">number</span>
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+                    &lt;optional><br>
+                
+
+                
+
+                
+                </td>
+            
+
+            
+
+            <td class="description last">The priority order, if any. If zero or undefined
+the definition to be executed as soon as all dependencies are available. If a
+non-zero priority is defined then the definition is not executed until all
+scripts have been loaded and all definitions with a lower priority have been
+executed.</td>
+        </tr>
+
+    
+    </tbody>
+</table>
+    
+
+    
+<dl class="details">
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="cycligent.js.html">cycligent.js</a>, <a href="cycligent.js.html#line2852">line 2852</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dd>
+
+        
+            
+<dt>
+    <h4 class="name" id=".definitionGet"><span class="type-signature">(static) </span>definitionGet<span class="signature">(dottedName)</span><span class="type-signature"> &rarr; {object}</span></h4>
+
+    
+</dt>
+<dd>
+
+    
+    <div class="description">
+        Finds a definition value, where the definition name is allowed to be a string
+that has dots in it, and will be properly found nested within a JavaScript object.
+It is common in Cycligent to define class names using a dotted syntax, such as cycligent.console.
+These names are stored as nested JavaScript objects, but the names are also commonly passed
+around as strings, which becomes difficult when you want to access them easily from the
+string name, this function and <a href="cycligent.html#.definitionSet">cycligent.definitionSet</a> help make this
+very simple and easy. The definition is found starting from the window object.
+
+This function assumes that the nested structure you're trying to pull data out of exists.
+    </div>
+    
+
+    
+
+    
+
+    
+        <h5>Parameters:</h5>
+        
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>dottedName</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">The dotted name to find.</td>
+        </tr>
+
+    
+    </tbody>
+</table>
+    
+
+    
+<dl class="details">
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="cycligent.js.html">cycligent.js</a>, <a href="cycligent.js.html#line2174">line 2174</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <h5>Returns:</h5>
+    
+            
+<div class="param-desc">
+    - The value of the dotted name
+</div>
+
+
+
+<dl>
+    <dt>
+        Type
+    </dt>
+    <dd>
+        
+<span class="param-type">object</span>
+
+
+    </dd>
+</dl>
+
+        
+
+    
+        <h5>Example</h5>
+        
+    <pre class="prettyprint"><code>cycligent.definitionGet("MyNamespace.MyClass");</code></pre>
+
+    
+</dd>
+
+        
+            
+<dt>
+    <h4 class="name" id=".definitionSet"><span class="type-signature">(static) </span>definitionSet<span class="signature">(dottedName, value<span class="signature-attributes">opt</span>)</span><span class="type-signature"> &rarr; {*}</span></h4>
+
+    
+</dt>
+<dd>
+
+    
+    <div class="description">
+        Sets a definition to a value, where the definition name is allowed to be a string
+that has dots in it, and will be properly assigned to a nested JavaScript object.
+It is common in Cycligent to define class names using a dotted syntax, such as cycligent.Tracer.
+These names are stored as nested JavaScript objects, but the names are also commonly passed
+around as strings, which becomes difficult when you want to access them easily from the
+string name, this function and <a href="cycligent.html#.definitionGet">cycligent.definitionGet</a> help make this
+very simple and easy. The definition is assigned starting from the window object.
+
+This function assumes that the nested structure you're trying to put data into exists.
+    </div>
+    
+
+    
+
+    
+
+    
+        <h5>Parameters:</h5>
+        
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+        <th>Attributes</th>
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>dottedName</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string</span>
+|
+
+<span class="param-type">object</span>
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+
+                
+
+                
+                </td>
+            
+
+            
+
+            <td class="description last">The dotted name to set. Or a map of the
+arguments.</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>value</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">*</span>
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+                    &lt;optional><br>
+                
+
+                
+
+                
+                </td>
+            
+
+            
+
+            <td class="description last">The value to set the dotted name to.</td>
+        </tr>
+
+    
+    </tbody>
+</table>
+    
+
+    
+<dl class="details">
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="cycligent.js.html">cycligent.js</a>, <a href="cycligent.js.html#line2212">line 2212</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <h5>Returns:</h5>
+    
+            
+
+
+<dl>
+    <dt>
+        Type
+    </dt>
+    <dd>
+        
+<span class="param-type">*</span>
+
+
+    </dd>
+</dl>
+
+        
+
+    
+        <h5>Example</h5>
+        
+    <pre class="prettyprint"><code>cycligent.definitionSet("MyNamespace.MyClass", classDefinition);</code></pre>
+
+    
+</dd>
+
+        
+            
+<dt>
+    <h4 class="name" id=".import"><span class="type-signature">(static) </span>import<span class="signature">(dottedNameOrUrl, extension<span class="signature-attributes">opt</span>)</span><span class="type-signature"></span></h4>
+
+    
+    <p class="summary">Dynamically imports a JavaScript file asynchronously via either a
+dotted name (ID) or a URL.</p>
+    
+</dt>
+<dd>
+
+    
+    <div class="description">
+        The Cycligent Framework provides the
+following support for the loading of JavaScript files:<br>
+<br>
+<li>Dynamic loading
+<li>Asynchronous loading
+<li>Common configuration
+<li>Logging
+<li>Versioning
+<li>Advanced caching
+<li>Namespace root location specification
+<li>Loading of compressed or uncompressed scripts
+<br>
+Scripts that depend on other scripts can import them using cycligent.import. These
+scripts are then loaded asynchronously and in parallel to the degree
+allowed by the browser.<br>
+<br>
+HTML files only need include the cycligent script tag. For more information
+on the Cycligent bootstraping process see <a href="cycligent.html#._loader">cycligent._loader</a>.<br>
+<br>
+Once Cycligent has successfully booted it loads the main.js that is in the
+same directory as the HTML file, or the startup script specified.
+It will also load any scripts imported by this script and any script
+they import and so on. Once the system has successfully loaded all scripts, any
+initialization code for the loaded file is run (see <a href="cycligent.html#.define">cycligent.define</a>).
+Once all initialization code has completed the system calls main(). <br>
+<br>
+Cycligent provides a logging mechanism that provides information
+on the loading of scripts and thier success or failure.<br>
+<br>
+The versioning feature of Cycligent not only supports the loading of
+the correct version of a code set, but also supports an
+advanced caching mechanism.  For more information on versioning please
+see <a href="https://www.cycligent.com">https://www.cycligent.com</a>.<br>
+<br>
+Advanced caching allows the expires headers of all javascript files to be
+set such that they "never" expire.  This not only eliminates the
+re-downloading of scripts but also the costly tcp/ip connection and
+communication around determining if an item in the cache is older than the
+current item on the server. <br>
+<br>
+Normally this technique would make it impossible to update the scripts
+once released.  By using cycligent.import and by incrementing the version on a
+release the code sets will automatically refresh on the client as needed.<br>
+<br>
+The location from which a given code set is loaded can also be configured
+via the cycligent.config.roots section of the common configuration
+<a href="cycligent.html#.config">cycligent.config</a>).  For more information on how these root locations
+are specified see <a href="cycligent.html#.root">cycligent.root</a>.<br>
+<br>
+Finally a configuration switch cycligent.config.minimizeSource
+can be thrown to either load the uncompressed or the compressed versions
+of the scripts. This is typically done by a production build process.<br>
+<br>
+Scripts to be imported can be specified either in the form of a dottend name or
+a URL. For more information on dotted name and URL usage see
+<a href="cycligent.html#.url">cycligent.url</a>
+    </div>
+    
+
+    
+
+    
+
+    
+        <h5>Parameters:</h5>
+        
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+        <th>Attributes</th>
+        
+
+        
+        <th>Default</th>
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>dottedNameOrUrl</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string</span>
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+
+                
+
+                
+                </td>
+            
+
+            
+                <td class="default">
+                
+                </td>
+            
+
+            <td class="description last">The script to import, specified
+as either a dotted name or a URL. For more information on name
+and URL handling see <a href="cycligent.html#.url">cycligent.url</a></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>extension</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string</span>
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+                    &lt;optional><br>
+                
+
+                
+
+                
+                </td>
+            
+
+            
+                <td class="default">
+                
+                    'js'
+                
+                </td>
+            
+
+            <td class="description last">The extenstion to be used with
+dotted names. Defaults to 'js'.</td>
+        </tr>
+
+    
+    </tbody>
+</table>
+    
+
+    
+<dl class="details">
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="cycligent.js.html">cycligent.js</a>, <a href="cycligent.js.html#line3332">line 3332</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+        <h5>Example</h5>
+        
+    <pre class="prettyprint"><code>cycligent.import( "app.sub.myScript" );
+   cycligent.import( "/myApp/mySubDirectory/myScript.js" );</code></pre>
+
+    
+</dd>
+
+        
+            
+<dt>
+    <h4 class="name" id=".interface"><span class="type-signature">(static) </span>interface<span class="signature">(map)</span><span class="type-signature"></span></h4>
+
+    
+    <p class="summary">Declares a classic interface (for use with classical inheritance classes).</p>
+    
+</dt>
+<dd>
+
+    
+    <div class="description">
+        cycligent.interface defines an interface that other classes can implement.
+It allows the methods of the interface, and their signatures,
+to be specified. It also allows for the method signature definition to be
+reused by <a href="cycligent.html#.args">cycligent.args</a>. It is recommended that calls to cycligent.interface
+use mapped arguments in the following order: name, extends, definition.
+See the example below.<br>
+<br>
+cycligent.interface definitions should be placed outside of functions. This allows
+them to be processed at startup. The processing of interface definitions that
+are dependant on other interface definitions (for example, if you extend an interface
+to create a new one with more methods) that have not yet been processed
+are deferred until they can be processed.  This allows race conditions
+during the asynchronous loading of scripts at startup to be avoided, and makes the
+order in which scripts are loaded unimportant.<br>
+<br>
+Depending on configuration settings (see cycligent.config.debug.interfaces)
+the implementation of interfaces by the class are validated.
+    </div>
+    
+
+    
+
+    
+
+    
+        <h5>Parameters:</h5>
+        
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>map</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">object</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">The object that specifies the interface, typically
+from an object literal in code (see example, and <a href="cycligent.html#.interfaceArgs">cycligent.interfaceArgs</a>).</td>
+        </tr>
+
+    
+    </tbody>
+</table>
+    
+
+    
+<dl class="details">
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="cycligent.js.html">cycligent.js</a>, <a href="cycligent.js.html#line2661">line 2661</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+        <h5>Example</h5>
+        
+    <pre class="prettyprint"><code>// The Interface:
+cycligent.interface({
+    name: "cycligent.TracerInt",
+    definition:{
+        getElement: {},										// Gets the HTML element that holds the trace information.
+        setElement: {element: {type: "HtmlElement:div"}},	// Sets the HTML element that holds the trace information.
+        trace: cycligent.tracerMessageArgs							// Issue a trace.
+}
+
+// A class that implements that interface:
+cycligent.Class({
+    name: "cycligent.Tracer",
+    implements: "cycligent.TracerInt",
+    definition: {
+        getElement: function() {
+            cycligent.args(arguments, cycligent.TracerInt.prototype.getElement);
+            // ... implementation ...
+        },
+
+        setElement: function() {
+            cycligent.args(arguments, cycligent.TracerInt.prototype.setElement);
+            // ... implementation ...
+        },
+
+        trace: function() {
+            cycligent.args(arguments, cycligent.TracerInt.prototype.trace);
+            // ... implementation ...
+        }
+    }
+});</code></pre>
+
+    
+</dd>
+
+        
+            
+<dt>
+    <h4 class="name" id=".private"><span class="type-signature">(static) </span>private<span class="signature">(alwaysThis)</span><span class="type-signature"></span></h4>
+
+    
+    <p class="summary">cycligent.private is used during debugging to ensure that private methods are only
+called by methods of the object in which it is defined.</p>
+    
+</dt>
+<dd>
+
+    
+    <div class="description">
+        To use cycligent.private simply place "cycligent.private(this);" at the top of the
+function. The cycligent framework will then throw an error if the call
+to the function was made from outside the object.
+    </div>
+    
+
+    
+
+    
+
+    
+        <h5>Parameters:</h5>
+        
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>alwaysThis</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">object</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">the only parameter to cycligent.private is always the "this" keyword.</td>
+        </tr>
+
+    
+    </tbody>
+</table>
+    
+
+    
+<dl class="details">
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="cycligent.js.html">cycligent.js</a>, <a href="cycligent.js.html#line3060">line 3060</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+        <h5>Example</h5>
+        
+    <pre class="prettyprint"><code>cycligent.class({
+    name: "Person",
+    definition:{
+        init: function(){
+            var a = cycligent.args(arguments, PersonArgs );
+            	
+            var name = a.name;
+            
+            this.getProtectedName = function Person_init_getProtectedName(){
+                cycligent.private(this);
+                return name;
+            };
+        },
+
+        nameGet: function(){
+            return this.getProtectedName();
+        }
+    }
+});</code></pre>
+
+    
+</dd>
+
+        
+            
+<dt>
+    <h4 class="name" id=".singleton"><span class="type-signature">(static) </span>singleton<span class="signature">(name, &hellip;arguments)</span><span class="type-signature"> &rarr; {Object}</span></h4>
+
+    
+</dt>
+<dd>
+
+    
+    <div class="description">
+        Takes a class name and returns a singleton object.  If the singleton
+object already exists it simply returns it, if not, it creates it.
+    </div>
+    
+
+    
+
+    
+
+    
+        <h5>Parameters:</h5>
+        
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+        <th>Attributes</th>
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>name</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string</span>
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+
+                
+
+                
+                </td>
+            
+
+            
+
+            <td class="description last">The name of the class from which to construct the singleton</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>arguments</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">*</span>
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+
+                
+
+                
+                    &lt;repeatable><br>
+                
+                </td>
+            
+
+            
+
+            <td class="description last">Arguments to singleton constructor</td>
+        </tr>
+
+    
+    </tbody>
+</table>
+    
+
+    
+<dl class="details">
+    
+
+        <h5 class="subsection-title">Properties:</h5>
+
+        <dl>
+
+<table class="props">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>initSingleton</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">function</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">If initSingleton is defined by the
+class it is called when the singleton is instantiated.</td>
+        </tr>
+
+    
+    </tbody>
+</table></dl>
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="cycligent.js.html">cycligent.js</a>, <a href="cycligent.js.html#line2352">line 2352</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+    <dt class="tag-see">See:</dt>
+    <dd class="tag-see">
+        <ul>
+            <li><a href="cycligent.html#.class">cycligent.class</a></li>
+        </ul>
+    </dd>
+    
+
+    
+</dl>
+
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <h5>Returns:</h5>
+    
+            
+
+
+<dl>
+    <dt>
+        Type
+    </dt>
+    <dd>
+        
+<span class="param-type">Object</span>
+
+
+    </dd>
+</dl>
+
+        
+
+    
+        <h5>Example</h5>
+        
+    <pre class="prettyprint"><code>cycligent.define("app");
+cycligent.class({
+    name: "app.Session",
+    definition: {
+        initSingleton: function() {
+            cycligent.args(arguments, {});
+            var me = this;
+            $.get("/sessionData", function(data) {
+                me.data = data;
+            });
+        },
+
+        userName: function() {
+            return this.data.username;
+        }
+    }
+});
+
+function main() {
+    var session = cycligent.singleton("app.Session");
+}</code></pre>
+
+    
+</dd>
+
+        
+            
+<dt>
+    <h4 class="name" id=".styleRequired"><span class="type-signature">(static) </span>styleRequired<span class="signature">(dottedNameOrUrl)</span><span class="type-signature"></span></h4>
+
+    
+    <p class="summary">Specifies that a particular stylesheet is required.</p>
+    
+</dt>
+<dd>
+
+    
+    <div class="description">
+        Missing styles can make it appear as though code is not functioning.
+When code is dependent on styles in a particular stylesheet you can
+use cycligent.styleRequired to indicate the required dependency. If
+the stylesheet does not load successfully during application loading
+Cycligent throws an error.
+    </div>
+    
+
+    
+
+    
+
+    
+        <h5>Parameters:</h5>
+        
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>dottedNameOrUrl</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">The script to import, specified
+as either a dotted name or a URL. For more information on name
+and URL handling see <a href="cycligent.html#.url">cycligent.url</a></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+    
+
+    
+<dl class="details">
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="cycligent.js.html">cycligent.js</a>, <a href="cycligent.js.html#line3411">line 3411</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+        <h5>Example</h5>
+        
+    <pre class="prettyprint"><code>cycligent.styleRequired( "app.common.css.myStyles" );
+   cycligent.styleRequired( "/app/common/css/myStyles.css" );</code></pre>
+
+    
+</dd>
+
+        
+            
+<dt>
+    <h4 class="name" id=".url"><span class="type-signature">(static) </span>url<span class="signature">(dottedNameOrUrl, extension<span class="signature-attributes">opt</span>)</span><span class="type-signature"> &rarr; {String}</span></h4>
+
+    
+    <p class="summary">Converts a string, which can be either a URL, or a dotted name into a fully
+realized URL.</p>
+    
+</dt>
+<dd>
+
+    
+    <div class="description">
+        If the string contains one or more slashes '/' it is treated as a URL.<br>
+<ul>
+<li>If the string contains '//', then the string is treated as an absolute
+URL and is returned as is with an added extension if the extension was not
+present.
+<li>If the string begins with a '/', the URL is realized relative to the
+deploy directory.
+<li>If the string begins with '@/', the URL is realized relative to the
+current application root.
+<li>Otherwise, the URL is realized relative to the current HTML file.
+</ul>
+If the string does not contain a slash it is treated as a dotted name.<br>
+<ul>
+<li>If the dotted name begins with a '^', the URL is realized relative to
+the deploy directory.
+<li>If the dotted name begins with '@', the URL is realized relative to the
+current application root.
+<li>If the dotted name begins with '.', the URL is realized relative to the
+current HTML (window.location) file.
+<li>Otherwise,
+<ul>
+<li>If a dotted name begins with a recognized root then the name is resolved
+relative to that root (this has the affect of making the '^' optional).
+<li>Otherwise, the dotted name is resolved relative to the current HTML file
+(window.location). This has the affect of making the '.' optional in all
+instances except where the first sub-directory was named the same as the
+root directory.
+</ul></ul>
+    </div>
+    
+
+    
+
+    
+
+    
+        <h5>Parameters:</h5>
+        
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+        <th>Attributes</th>
+        
+
+        
+        <th>Default</th>
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>dottedNameOrUrl</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">String</span>
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+
+                
+
+                
+                </td>
+            
+
+            
+                <td class="default">
+                
+                </td>
+            
+
+            <td class="description last">The dotted name or URL to resolve.</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>extension</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">String</span>
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+                    &lt;optional><br>
+                
+
+                
+
+                
+                </td>
+            
+
+            
+                <td class="default">
+                
+                    'js'
+                
+                </td>
+            
+
+            <td class="description last">The file type (extension) of the file
+for which the URL is to be generated. Defaults to "js" for JavaScript.
+Only applies to dotted names, URLs must specify the extension.</td>
+        </tr>
+
+    
+    </tbody>
+</table>
+    
+
+    
+<dl class="details">
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="cycligent.js.html">cycligent.js</a>, <a href="cycligent.js.html#line591">line 591</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <h5>Returns:</h5>
+    
+            
+<div class="param-desc">
+    - The fully realized (absolute) URL (the location on
+the server (URL) of the specified resource)
+</div>
+
+
+
+<dl>
+    <dt>
+        Type
+    </dt>
+    <dd>
+        
+<span class="param-type">String</span>
+
+
+    </dd>
+</dl>
+
+        
+
+    
+        <h5>Example</h5>
+        
+    <pre class="prettyprint"><code>If we imported the JavaScript file "cycligent.startup.info",
+  we would be referring to the script named "info.js" in the startup folder,
+  of a root named "cycligent".
+If we imported the JavaScript file "^cycligent.startup.info",
+  we would be referring to the same thing as above, the "^" is a way of
+  being explicit about the fact that "cycligent" is a root, and not a
+  folder relative to where the user is. (since the Cycligent Framework
+  will recognize roots in dotted names, the "^" is optional. You might
+  want to specify it to be clear to others reading your code that what
+  you are specifying is from an application root.)
+If we imported the JavaScript file "@cmn.dashboard.graph",
+  this refers to an file named "graph.js"  in the "cmn/dashboard"
+  folder of the current application root. "@" means current
+  application root.
+If we imported the JavaScript file ".utils",
+  we would be referring to a file named "utils.js" in the same folder as
+  the current HTML file.
+If we imported the JavaScript file "utils",
+  it would do the same as above. Thus, if you are loading a file relative to
+  the current HTML page, you do not need to use the "." in most cases, unless
+  the file or folder you are loading from has the same name as an application
+  root.
+If we imported the JavaScript file //ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js
+  that URL would be returned as-is.
+If we imported the JavaScript file //ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min
+  the extension, which defaults to .js, will be added to the URL.
+If we imported the JavaScript file, /jquery.min.js
+  and the application was deploy directory was www.cycligent.com, we would
+  be referring to www.example.com/jquery.min.js
+If we imported the JavaScript file, @/jquery.min.js
+  and the current application root was www.example.com/app, we would
+  be referring to www.example.com/app/jquery.min.js</code></pre>
+
+    
+</dd>
+
+        </dl>
+    
+
+    
+
+    
+</article>
+
+</section>
+
+
+
+
+</div>
+
+<nav>
+    <h2><a href="index.html">Cycligent Framework</a></h2><h3>Namespaces</h3><ul><li><a href="cycligent.html">cycligent</a><div class='nav-expanded'><strong>Members</strong><ul><li><a href="cycligent.html#.browser">browser</a></li><li><a href="cycligent.html#.classArgs">classArgs</a></li><li><a href="cycligent.html#.config">config</a></li><li><a href="cycligent.html#.interfaceArgs">interfaceArgs</a></li><li><a href="cycligent.html#.root">root</a></li></ul><strong>Methods</strong><ul><li><a href="cycligent.html#._loader">_loader</a></li><li><a href="cycligent.html#.args">args</a></li><li><a href="cycligent.html#.class">class</a></li><li><a href="cycligent.html#.define">define</a></li><li><a href="cycligent.html#.definitionGet">definitionGet</a></li><li><a href="cycligent.html#.definitionSet">definitionSet</a></li><li><a href="cycligent.html#.import">import</a></li><li><a href="cycligent.html#.interface">interface</a></li><li><a href="cycligent.html#.private">private</a></li><li><a href="cycligent.html#.singleton">singleton</a></li><li><a href="cycligent.html#.styleRequired">styleRequired</a></li><li><a href="cycligent.html#.url">url</a></li></ul><strong>Classes</strong><ul><li><a href="cycligent.Script.html">Script</a></li></ul></div></li></ul><h3>Modules</h3><ul><li><a href="cycligent.module_console.html">console</a></li></div><li><a href="cycligent.module_test.html">test</a></li></div><li><a href="cycligent.module_timing.html">timing</a></li></div></ul><h3>Classes</h3><ul><li><a href="cycligent.module_console.Message.html">console.Message</a></li><li><a href="cycligent.module_timing.TimingEvent.html">timing.TimingEvent</a></li></ul><h3>Global</h3><ul><li><a href="global.html#cycligentConfigOverride">cycligentConfigOverride</a></li><li><a href="global.html#cycligentRunningBase">cycligentRunningBase</a></li></ul>
+</nav>
+
+<br clear="both">
+
+<footer>
+    Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.3.2</a> on Thu Sep 03 2015 13:07:19 GMT-0700 (US Mountain Standard Time)
+</footer>
+
+<script> prettyPrint(); </script>
+<script src="scripts/linenumber.js"> </script>
+</body>
+</html>

@@ -1,0 +1,1636 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>JSDoc: Module: timing</title>
+
+    <script src="scripts/prettify/prettify.js"> </script>
+    <script src="scripts/prettify/lang-css.js"> </script>
+    <!--[if lt IE 9]>
+      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <link type="text/css" rel="stylesheet" href="styles/prettify-tomorrow.css">
+    <link type="text/css" rel="stylesheet" href="styles/jsdoc-default.css">
+    <link href='http://fonts.googleapis.com/css?family=Droid+Sans' rel='stylesheet' type='text/css'>
+</head>
+
+<body>
+
+<div id="main">
+
+    <h1 class="page-title">Module: timing</h1>
+
+    
+
+
+
+<section>
+
+<header>
+    <h2>
+        <span class="ancestors"><a href="cycligent.html">cycligent</a>.</span>
+    
+    timing
+    </h2>
+    
+</header>
+
+<article>
+    <div class="container-overview">
+    
+
+    
+        
+            <div class="description">Cycligent timing simplifies performance measurement in asynchronous
+applications. It is basically a continuous timeline that can reviewed.
+It provides durations of events, including idle time. Cycligent timing
+is timeline/event oriented. You do not have to issue starts and stops
+for each item you want to time.  Instead you just signal events and
+Cycligent does the rest.
+<br>
+<ul><li>Event Organization<br>
+<br>
+Cycligent timing events can be organized by using indent and unindent
+functions. These events can then be viewed in a tree fashion. Cycligent
+extends the indent/unindent approach to handle idle events that are hard
+to signal because of multiple overlapping asynchronous processes needing
+to complete. The start of such events can be signaled via
+<a href="cycligent.module_timing.html#.asyncBegin">cycligent.timing.asyncBegin</a> or
+<a href="cycligent.module_timing.html#.idleIndent">cycligent.timing.idleIndent</a>.
+The async process can then be completed either
+<a href="cycligent.module_timing.html#.idle">cycligent.timing.idle</a>
+or <a href="cycligent.module_timing.html#.asyncEnd">cycligent.timing.asyncEnd</a>.
+When the last asynchronous operation completes the application is marked
+as idle on the timeline.<br>
+<br>
+<li>Idle Tracking & Overlapping Asynchronous Events<br>
+<br>
+Multiple overlapping asynchronous events can cause the timeline
+durations to become muddled (the exact duration of a given operation
+being cut short by another event with another event looking like it took
+lonoger).  Cycligent timing does its best to rectify these issues where
+possible. That being said, Cycligent does not try to eliminate these
+occurrences. This is because in practice the items are easy to
+identify when viewed and it is possible to determine the duration of
+a given process from the timeline.  We have, therefore, favored keeping
+the API, and the output, simple.<br>
+<br>
+<li>External Timing Inclusion<br>
+<br>
+Cycligent timing also provides for the inclusion of external performance
+(timing) information. Normally a duration is not supplied to
+<a href="cycligent.module_timing.html#.event">cycligent.timing.event</a> or other event
+signalling functions. But, if a duration is supplied, then the event is
+marked as occurring externally. This is useful for including server processing
+times, such as database query times, in the timeline.  The timeline still tracks
+durations on either side of the external events with actual durations.
+If the immediately preceding event in the timeline is at the same
+indent level as the first external event (usually a single event with
+descendents) then it duration is automatically subtracted from the
+duration of the preceding event, which would have normally been the case
+had the external events occurred internally.<br>
+<br>
+<li>Timing Start<br>
+<br>
+Cycligent automatically starts timing as soon as it is loaded. You can
+measure from an earlier point by adding a script tag to the top of your
+HEAD section, in the initial HTML file loaded, that sets the global
+variable cycligentRunningBase to the time from which you want to being
+the running timer.  See the example below.  The example provided
+measures everything but the time it takes to load the initial HTML
+file. All scripts, css, etc that it loads, even in the head section,
+are measured.</div>
+        
+
+        
+<dl class="details">
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="cycligent.js.html">cycligent.js</a>, <a href="cycligent.js.html#line839">line 839</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+        
+            <h3>Example</h3>
+            
+    <pre class="prettyprint"><code>Setting the startring load time via cycligentRunningBase (place at the
+top of your HEAD section):
+
+    &lt;script>window.cycligentRunningBase = (new Date()).getTime();&lt;/script>
+
+Example of using timings from within an angularjs application:
+
+cycligent.timing.eventIndent(false, "Get data", 1);
+$http.get('/api/data/all')
+    .success(function (data) {
+        cycligent.timing.event("Process data", 1);
+        for (var d in data) {
+            processData(data[d]);
+        }
+        cycligent.timing.event("Process view", 1);
+        deferred.resolve(data);
+        cycligent.timing.idle();
+    });</code></pre>
+
+        
+    
+    </div>
+
+    
+
+    
+
+    
+
+    
+        <h3 class="subsection-title">Classes</h3>
+
+        <dl>
+            <dt><a href="cycligent.module_timing.TimingEvent.html">TimingEvent</a></dt>
+            <dd></dd>
+        </dl>
+    
+
+     
+
+    
+
+    
+        <h3 class="subsection-title">Members</h3>
+
+        <dl>
+            
+<dt>
+    <h4 class="name" id=".events"><span class="type-signature">(static) </span>events<span class="type-signature"> :Array.&lt;cycligent.timing.TimingEvent></span></h4>
+
+    
+</dt>
+<dd>
+    
+    <div class="description">
+        Array of timing events
+    </div>
+    
+
+    
+        <h5>Type:</h5>
+        <ul>
+            <li>
+                
+<span class="param-type">Array.&lt;cycligent.timing.TimingEvent></span>
+
+
+            </li>
+        </ul>
+    
+
+    
+<dl class="details">
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="cycligent.js.html">cycligent.js</a>, <a href="cycligent.js.html#line1097">line 1097</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+    
+
+    
+</dd>
+
+        </dl>
+    
+
+    
+        <h3 class="subsection-title">Methods</h3>
+
+        <dl>
+            
+<dt>
+    <h4 class="name" id=".asyncBegin"><span class="type-signature">(static) </span>asyncBegin<span class="signature">(title, indent<span class="signature-attributes">opt</span>)</span><span class="type-signature"></span></h4>
+
+    
+    <p class="summary">Begins tracking of an asynchronous process and increases the
+idle indent.</p>
+    
+</dt>
+<dd>
+
+    
+    <div class="description">
+        Cycligent extends the indent/unindent approach (see
+<a href="cycligent.module_timing.html#.indent">cycligent.timing.indent</a>
+and <a href="cycligent.module_timing.html#.unindent">cycligent.timing.unindent</a>)
+to handle idle events that are hard to signal because of multiple
+overlapping asynchronous processes needing to complete. The start of such
+events can be signaled via
+<a href="cycligent.module_timing.html#.asyncBegin">cycligent.timing.asyncBegin</a> or
+<a href="cycligent.module_timing.html#.idleIndent">cycligent.timing.idleIndent</a>.
+The async process can then be completed either
+<a href="cycligent.module_timing.html#.idle">cycligent.timing.idle</a> or
+<a href="cycligent.module_timing.html#.asyncEnd">cycligent.timing.asyncEnd</a>.
+When the last asynchronous operation completes the application is marked
+as idle on the timeline.
+    </div>
+    
+
+    
+
+    
+
+    
+        <h5>Parameters:</h5>
+        
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+        <th>Attributes</th>
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>title</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string</span>
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+
+                
+
+                
+                </td>
+            
+
+            
+
+            <td class="description last">Title of timing event.</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>indent</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">int</span>
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+                    &lt;optional><br>
+                
+
+                
+
+                
+                </td>
+            
+
+            
+
+            <td class="description last">The nested level of the event. If not provided
+the current indent level is used.  The current indent level is the
+indent last provided to an Event constructor or as modified by
+<a href="cycligent.module_timing.html#.indent">cycligent.timing.indent</a>
+or <a href="cycligent.module_timing.html#.unindent">cycligent.timing.unindent</a>.</td>
+        </tr>
+
+    
+    </tbody>
+</table>
+    
+
+    
+<dl class="details">
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="cycligent.js.html">cycligent.js</a>, <a href="cycligent.js.html#line1253">line 1253</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dd>
+
+        
+            
+<dt>
+    <h4 class="name" id=".asyncEnd"><span class="type-signature">(static) </span>asyncEnd<span class="signature">()</span><span class="type-signature"></span></h4>
+
+    
+    <p class="summary">End tracking of an asynchronous event and decreases the idle indent.
+Identical to <a href="cycligent.module_timing.html#.idle">cycligent.timing.idle</a>.</p>
+    
+</dt>
+<dd>
+
+    
+    <div class="description">
+        Cycligent extends the indent/unindent approach (see
+<a href="cycligent.module_timing.html#.indent">cycligent.timing.indent</a>
+and <a href="cycligent.module_timing.html#.unindent">cycligent.timing.unindent</a>)
+to handle idle events that are hard to signal because of multiple
+overlapping asynchronous processes needing to complete. The start of such
+events can be signaled via
+<a href="cycligent.module_timing.html#.asyncBegin">cycligent.timing.asyncBegin</a> or
+<a href="cycligent.module_timing.html#.idleIndent">cycligent.timing.idleIndent</a>.
+The async process can then be completed either
+<a href="cycligent.module_timing.html#.idle">cycligent.timing.idle</a> or
+<a href="cycligent.module_timing.html#.asyncEnd">cycligent.timing.asyncEnd</a>.
+When the last asynchronous operation completes the application is marked as
+idle on the timeline.
+    </div>
+    
+
+    
+
+    
+
+    
+
+    
+<dl class="details">
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="cycligent.js.html">cycligent.js</a>, <a href="cycligent.js.html#line1281">line 1281</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dd>
+
+        
+            
+<dt>
+    <h4 class="name" id=".clear"><span class="type-signature">(static) </span>clear<span class="signature">()</span><span class="type-signature"></span></h4>
+
+    
+</dt>
+<dd>
+
+    
+    <div class="description">
+        Clear console messages
+    </div>
+    
+
+    
+
+    
+
+    
+
+    
+<dl class="details">
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="cycligent.js.html">cycligent.js</a>, <a href="cycligent.js.html#line1105">line 1105</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dd>
+
+        
+            
+<dt>
+    <h4 class="name" id=".event"><span class="type-signature">(static) </span>event<span class="signature">(title, indent<span class="signature-attributes">opt</span>, duration<span class="signature-attributes">opt</span>)</span><span class="type-signature"></span></h4>
+
+    
+</dt>
+<dd>
+
+    
+    <div class="description">
+        Signals a timing event
+    </div>
+    
+
+    
+
+    
+
+    
+        <h5>Parameters:</h5>
+        
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+        <th>Attributes</th>
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>title</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string</span>
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+
+                
+
+                
+                </td>
+            
+
+            
+
+            <td class="description last">Title of timing event.</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>indent</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">int</span>
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+                    &lt;optional><br>
+                
+
+                
+
+                
+                </td>
+            
+
+            
+
+            <td class="description last">The nested level of the event. If not provided
+the current indent level is used.  The current indent level is the
+indent last provided to an Event constructor or as modified by
+<a href="cycligent.module_timing.html#.indent">cycligent.timing.indent</a>
+or <a href="cycligent.module_timing.html#.unindent">cycligent.timing.unindent</a>.</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>duration</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">int</span>
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+                    &lt;optional><br>
+                
+
+                
+
+                
+                </td>
+            
+
+            
+
+            <td class="description last">Milliseconds event lasted. Only used when
+the event occurred out-of-band (such as on a server) and the event
+is being logged to account for those times (such as the time it took
+for a query to run on the server).</td>
+        </tr>
+
+    
+    </tbody>
+</table>
+    
+
+    
+<dl class="details">
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="cycligent.js.html">cycligent.js</a>, <a href="cycligent.js.html#line1171">line 1171</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dd>
+
+        
+            
+<dt>
+    <h4 class="name" id=".eventIndent"><span class="type-signature">(static) </span>eventIndent<span class="signature">(increaseIdleIndent, title, indent<span class="signature-attributes">opt</span>, title2<span class="signature-attributes">opt</span>)</span><span class="type-signature"></span></h4>
+
+    
+    <p class="summary">Creates a primary event and its first indented event.</p>
+    
+</dt>
+<dd>
+
+    
+    <div class="description">
+        The first indented event, being created at the same time as the
+primary event, ensures that the indented event durations will
+total the primary event duration. Durations might not otherwise
+total the primary event duration because of time passing between
+the creation of the primary event and its first child event.
+This is normal but some people like to see the totals add up.
+While this could be accomplished by simply calling
+<a href="cycligent.module_timing.html#.event">cycligent.timing.event</a>
+in succession, this event provides the same functionality in
+a single call.<br>
+<br>
+In addition to just making the childrens' durations total the
+primary duration, this function can increase the idle indent.
+Idle indent allows the determination of an idle state easier
+when there are multiple overlapping asynchronous events. See
+cycligent.timing for more information.
+    </div>
+    
+
+    
+
+    
+
+    
+        <h5>Parameters:</h5>
+        
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+        <th>Attributes</th>
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>increaseIdleIndent</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">boolean</span>
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+
+                
+
+                
+                </td>
+            
+
+            
+
+            <td class="description last"></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>title</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string</span>
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+
+                
+
+                
+                </td>
+            
+
+            
+
+            <td class="description last"></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>indent</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">int</span>
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+                    &lt;optional><br>
+                
+
+                
+
+                
+                </td>
+            
+
+            
+
+            <td class="description last">The nested level of the primary (first)
+event. If not provided the current indent level is used.  The
+current indent level is the indent last provided to an Event
+constructor or as modified by <a href="cycligent.module_timing.html#.indent">cycligent.timing.indent</a>
+or <a href="cycligent.module_timing.html#.unindent">cycligent.timing.unindent</a>.</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>title2</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string</span>
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+                    &lt;optional><br>
+                
+
+                
+
+                
+                </td>
+            
+
+            
+
+            <td class="description last">The title of the first indented
+event to the primary event, which is created automatically.
+Title2 defaults to "Network/Other" and serves as a catch all
+for any time not required by other segments occurring under
+the primary event.</td>
+        </tr>
+
+    
+    </tbody>
+</table>
+    
+
+    
+<dl class="details">
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="cycligent.js.html">cycligent.js</a>, <a href="cycligent.js.html#line1213">line 1213</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dd>
+
+        
+            
+<dt>
+    <h4 class="name" id=".idle"><span class="type-signature">(static) </span>idle<span class="signature">()</span><span class="type-signature"></span></h4>
+
+    
+    <p class="summary">Indicates that the application is in an idle state, or is potentially
+in an idle state in the case of multiple overlapping asynchronous
+events.</p>
+    
+</dt>
+<dd>
+
+    
+    <div class="description">
+        Cycligent extends the indent/unindent approach (see
+<a href="cycligent.module_timing.html#.indent">cycligent.timing.indent</a>
+and <a href="cycligent.module_timing.html#.unindent">cycligent.timing.unindent</a>)
+to handle idle events that are hard to signal because of multiple
+overlapping asynchronous processes needing to complete. The start of such
+events can be signaled via
+<a href="cycligent.module_timing.html#.asyncBegin">cycligent.timing.asyncBegin</a> or
+<a href="cycligent.module_timing.html#.idleIndent">cycligent.timing.idleIndent</a>.
+The async process can then be completed either
+<a href="cycligent.module_timing.html#.idle">cycligent.timing.idle</a> or
+<a href="cycligent.module_timing.html#.asyncEnd">cycligent.timing.asyncEnd</a>.
+When the last asynchronous operation completes the application is marked
+as idle on the timeline.
+    </div>
+    
+
+    
+
+    
+
+    
+
+    
+<dl class="details">
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="cycligent.js.html">cycligent.js</a>, <a href="cycligent.js.html#line1335">line 1335</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dd>
+
+        
+            
+<dt>
+    <h4 class="name" id=".idleIndent"><span class="type-signature">(static) </span>idleIndent<span class="signature">()</span><span class="type-signature"></span></h4>
+
+    
+    <p class="summary">Increases the idle indent</p>
+    
+</dt>
+<dd>
+
+    
+    <div class="description">
+        Cycligent extends the indent/unindent approach (see
+<a href="cycligent.module_timing.html#.indent">cycligent.timing.indent</a>
+and <a href="cycligent.module_timing.html#.unindent">cycligent.timing.unindent</a>)
+to handle idle events that are hard to signal because of multiple
+overlapping asynchronous processes needing to complete. The start of such
+events can be signaled via
+<a href="cycligent.module_timing.html#.asyncBegin">cycligent.timing.asyncBegin</a> or
+<a href="cycligent.module_timing.html#.idleIndent">cycligent.timing.idleIndent</a>.
+The async process can then be completed either
+<a href="cycligent.module_timing.html#.idle">cycligent.timing.idle</a> or
+<a href="cycligent.module_timing.html#.asyncEnd">cycligent.timing.asyncEnd</a>.
+When the last asynchronous operation completes the application is marked
+as idle on the timeline.
+    </div>
+    
+
+    
+
+    
+
+    
+
+    
+<dl class="details">
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="cycligent.js.html">cycligent.js</a>, <a href="cycligent.js.html#line1308">line 1308</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dd>
+
+        
+            
+<dt>
+    <h4 class="name" id=".indent"><span class="type-signature">(static) </span>indent<span class="signature">()</span><span class="type-signature"></span></h4>
+
+    
+</dt>
+<dd>
+
+    
+    <div class="description">
+        Increase the current indent level by one, up to a maximum of 25.
+    </div>
+    
+
+    
+
+    
+
+    
+
+    
+<dl class="details">
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="cycligent.js.html">cycligent.js</a>, <a href="cycligent.js.html#line1364">line 1364</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dd>
+
+        
+            
+<dt>
+    <h4 class="name" id=".notify"><span class="type-signature">(static) </span>notify<span class="signature">(func)</span><span class="type-signature"></span></h4>
+
+    
+</dt>
+<dd>
+
+    
+    <div class="description">
+        Register a notification function
+    </div>
+    
+
+    
+
+    
+
+    
+        <h5>Parameters:</h5>
+        
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>func</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">function</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">The function to be called whenever a timing
+event is logged or timings are cleared. The notify function
+should accept one argument
+(<a href="cycligent.module_timing.TimingEvent.html">cycligent.timing.TimingEvent</a>)
+which will be contain the new timing segment. If the segment is not
+passed to the function (undefined) then the timings were cleared.</td>
+        </tr>
+
+    
+    </tbody>
+</table>
+    
+
+    
+<dl class="details">
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="cycligent.js.html">cycligent.js</a>, <a href="cycligent.js.html#line1393">line 1393</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dd>
+
+        
+            
+<dt>
+    <h4 class="name" id=".notifyClear"><span class="type-signature">(static) </span>notifyClear<span class="signature">(func)</span><span class="type-signature"></span></h4>
+
+    
+</dt>
+<dd>
+
+    
+    <div class="description">
+        Unregister a notification function
+    </div>
+    
+
+    
+
+    
+
+    
+        <h5>Parameters:</h5>
+        
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>func</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">function</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">The notify function to unregister.</td>
+        </tr>
+
+    
+    </tbody>
+</table>
+    
+
+    
+<dl class="details">
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="cycligent.js.html">cycligent.js</a>, <a href="cycligent.js.html#line1410">line 1410</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dd>
+
+        
+            
+<dt>
+    <h4 class="name" id=".unindent"><span class="type-signature">(static) </span>unindent<span class="signature">()</span><span class="type-signature"></span></h4>
+
+    
+</dt>
+<dd>
+
+    
+    <div class="description">
+        Decrease the current indent level by one, to a minimum of 0.
+    </div>
+    
+
+    
+
+    
+
+    
+
+    
+<dl class="details">
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="cycligent.js.html">cycligent.js</a>, <a href="cycligent.js.html#line1375">line 1375</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dd>
+
+        </dl>
+    
+
+    
+
+    
+</article>
+
+</section>
+
+
+
+
+</div>
+
+<nav>
+    <h2><a href="index.html">Cycligent Framework</a></h2><h3>Namespaces</h3><ul><li><a href="cycligent.html">cycligent</a><div class='nav-expanded'><strong>Members</strong><ul><li><a href="cycligent.html#.browser">browser</a></li><li><a href="cycligent.html#.classArgs">classArgs</a></li><li><a href="cycligent.html#.config">config</a></li><li><a href="cycligent.html#.interfaceArgs">interfaceArgs</a></li><li><a href="cycligent.html#.root">root</a></li></ul><strong>Methods</strong><ul><li><a href="cycligent.html#._loader">_loader</a></li><li><a href="cycligent.html#.args">args</a></li><li><a href="cycligent.html#.class">class</a></li><li><a href="cycligent.html#.define">define</a></li><li><a href="cycligent.html#.definitionGet">definitionGet</a></li><li><a href="cycligent.html#.definitionSet">definitionSet</a></li><li><a href="cycligent.html#.import">import</a></li><li><a href="cycligent.html#.interface">interface</a></li><li><a href="cycligent.html#.private">private</a></li><li><a href="cycligent.html#.singleton">singleton</a></li><li><a href="cycligent.html#.styleRequired">styleRequired</a></li><li><a href="cycligent.html#.url">url</a></li></ul><strong>Classes</strong><ul><li><a href="cycligent.Script.html">Script</a></li></ul></div></li></ul><h3>Modules</h3><ul><li><a href="cycligent.module_console.html">console</a></li></div><li><a href="cycligent.module_test.html">test</a></li></div><li><a href="cycligent.module_timing.html">timing</a></li></div></ul><h3>Classes</h3><ul><li><a href="cycligent.module_console.Message.html">console.Message</a></li><li><a href="cycligent.module_timing.TimingEvent.html">timing.TimingEvent</a></li></ul><h3>Global</h3><ul><li><a href="global.html#cycligentConfigOverride">cycligentConfigOverride</a></li><li><a href="global.html#cycligentRunningBase">cycligentRunningBase</a></li></ul>
+</nav>
+
+<br clear="both">
+
+<footer>
+    Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.3.2</a> on Thu Sep 03 2015 13:07:20 GMT-0700 (US Mountain Standard Time)
+</footer>
+
+<script> prettyPrint(); </script>
+<script src="scripts/linenumber.js"> </script>
+</body>
+</html>
