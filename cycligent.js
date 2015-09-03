@@ -7,6 +7,7 @@
  * <li><b>Classic Object Model</b> - classes, inheritance and interfaces
  * <li><b>Function Argument Augmentation</b>
  * <li><b>Advanced Testing Support</b>
+ * <li><b>Works with other JavaScript frameworks, including Angular.js (including lazy loading)</b>
  * </ul>
  * Details:<br>
  * <ul>
