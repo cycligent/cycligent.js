@@ -24,7 +24,7 @@ Description
 - Classic Object Model - classes, inheritance and interfaces
 - Function Argument Augmentation
 - Advanced Testing Support
-- Works with other JavaScript frameworks, including Angular.js (including lazy loading.)
+- Works with other JavaScript frameworks, including Angular.js (including lazy loading)
 
 Details
 --------
