@@ -17,6 +17,13 @@ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 See the License for the specific language governing permissions and
 limitations under the License.
 
+Getting
+-------
+
+- You can use the `cycligent.js` or `cycligent.min.js` files in this repo.
+- Available as npm module named `cycligent.js` - https://www.npmjs.com/package/cycligent.js
+- Available as bower module named `cycligent.js`
+
 Description
 -----------
 
