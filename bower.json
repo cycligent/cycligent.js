@@ -1,0 +1,26 @@
+{
+  "name": "cycligent.js",
+  "main": "cycligent.js",
+  "version": "1.0.0",
+  "homepage": "https://github.com/cycligent/cycligent.js",
+  "authors": [
+    "Frank Garcia (frank.garcia@iicorporate.com)"
+  ],
+  "description": "Asynchronous script loading, including lazy loading for Angular.js, classic object model, and more.",
+  "moduleType": [
+    "globals"
+  ],
+  "keywords": [
+    "async",
+    "oop",
+    "loading"
+  ],
+  "license": "Apache 2.0",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
